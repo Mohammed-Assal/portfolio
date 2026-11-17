@@ -15,6 +15,7 @@ import { FaJira } from "react-icons/fa";
 import { SiRedux } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaJs } from "react-icons/fa";
+import "../../globals.css";
 const frontendSkills = [
   {
     name: "Next.js",
@@ -33,7 +34,7 @@ const frontendSkills = [
   },
   {
     name: "Javascript",
-    description: "FaJs language for creating dynamic webpages",
+    description: "Javascript",
     icon: <FaJs className="text-[22px]" />,
   },
   {
@@ -110,10 +111,12 @@ const Skills = () => {
           {frontendSkills.map((skill, index) => (
             <div
               key={index}
-              className=" flex space-x-2 items-center rounded-lg shadow-lg text-gray-400"
+              className=" flex icon-container space-x-2 items-center rounded-lg shadow-lg text-gray-400"
             >
-              <div className=" text-[10px] mr-1">{skill.icon}</div>
+              <div className=" icon text-[10px] mr-1">{skill.icon}</div>
+
               <h4 className="text-[16px] font-semibold">{skill.name}</h4>
+              <span className="tooltip">{skill.description}</span>
             </div>
           ))}
         </div>
@@ -128,10 +131,12 @@ const Skills = () => {
           {backendSkills.map((skill, index) => (
             <div
               key={index}
-              className=" flex space-x-2 items-center rounded-lg shadow-lg text-gray-400"
+              className=" flex icon-container space-x-2 items-center rounded-lg shadow-lg text-gray-400"
             >
-              <div className="mr-1 text-[16px]">{skill.icon}</div>
+              <div className=" icon text-[10px] mr-1">{skill.icon}</div>
+
               <h4 className="text-[16px] font-semibold">{skill.name}</h4>
+              <span className="tooltip">{skill.description}</span>
             </div>
           ))}
         </div>
@@ -142,10 +147,12 @@ const Skills = () => {
           {Otherskills.map((skill, index) => (
             <div
               key={index}
-              className=" flex space-x-2 items-center rounded-lg shadow-lg text-gray-400"
+              className=" flex icon-container space-x-2 items-center rounded-lg shadow-lg text-gray-400"
             >
-              <div className="mr-1 text-[16px]">{skill.icon}</div>
+              <div className=" icon text-[10px] mr-1">{skill.icon}</div>
+
               <h4 className="text-[16px] font-semibold">{skill.name}</h4>
+              <span className="tooltip">{skill.description}</span>
             </div>
           ))}
         </div>

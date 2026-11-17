@@ -5,11 +5,8 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("mjvnrwkr");
 
   return (
-    <div className="md:w-[60%] w-full  ">
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-4 max-w-[550px] mx-auto p-4"
-      >
+    <div className=" md:pt-[80px] pt-[40px]  md:min-w-[40%] min-w-[100%]  ">
+      <form onSubmit={handleSubmit} className="space-y-4 max-w-[550px] p-4">
         <div>
           <label htmlFor="emailOrNumber" className="block text-gray-400">
             Email or Phone
@@ -69,7 +66,7 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="w-full py-2 bg-green-400 text-white rounded-md"
+          className="w-full py-2 bg-green-400 hover:bg-white hover:text-green-400 hover:border-2 hover:border-green-400 text-white rounded-md"
           disabled={state.submitting}
         >
           {state.submitting ? "Sending..." : "Send Message"}
@@ -78,6 +75,7 @@ const Contact = () => {
           <p className="text-green-500 mt-4">Thanks for Message!</p>
         )}
       </form>
+      <div className="mb-[100px] md:mb-[0]"></div>
     </div>
   );
 };
